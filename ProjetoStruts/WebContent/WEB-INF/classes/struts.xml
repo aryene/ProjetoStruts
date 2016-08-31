@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+
+   <package name="default"  extends="struts-default">
+     
+      <action name="inicio">
+			<result>/index.jsp</result>
+		</action>
+
+	<action name="telaCliente">
+		<result>/jsp/cliente.jsp</result>
+	</action>
+	
+	<action name="telaFornecedor">
+		<result>/jsp/fornecedorLista.jsp</result>
+	</action>
+<action name="telaFornecedor">
+		<result>/jsp/fornecedor.jsp</result>
+	</action>
+		
+   </package>
+   
+   <include file="struts-cliente.xml" />
+   <include file="struts-fornecedor.xml" />
+   
+</struts>
