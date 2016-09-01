@@ -4,9 +4,7 @@ package br.com.PersistStruts.actions;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.opensymphony.xwork2.ActionSupport;
-import br.com.PersistStruts.modelo.Cliente;
 import br.com.PersistStruts.modelo.Fornecedor;
-import br.com.PersistStruts.servicos.ClienteServico;
 import br.com.PersistStruts.servicos.FornecedorServico;
 
 public class FornecedorAction extends ActionSupport {
@@ -21,13 +19,18 @@ public class FornecedorAction extends ActionSupport {
 	FornecedorServico fornecedorServico;
 
 	public String cadastraFornecedor(){
-		System.out.println("e ai doido");
+		System.out.println("Eita foi salvo ");
 		this.addActionMessage(this.fornecedorServico.salvar(this.getFornecedor()));
 		return SUCCESS;
 	}
 
 	public String pesquisarFornecedorNome(){
 		this.setListaFornecedor(this.fornecedorServico.pesquisarFornecedorNome(this.getFornecedor()));
+		return SUCCESS;
+	}
+	
+	public String pesquisarFornecedor(){
+		this.setListaFornecedor(this.fornecedorServico.pesquisarFornecedor());
 		return SUCCESS;
 	}
 	

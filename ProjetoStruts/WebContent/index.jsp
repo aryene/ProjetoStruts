@@ -16,20 +16,40 @@
 </head>
 <body>
 
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">InovarTec</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index">Home</a></li>
+            <li><a href="telaCliente"> Cadastro de Clientes</a></li>
+            <li><a href="telaFornecedor">Cadastro de Fornecedores </a></li>
+            <li><a href="telaProduto">Cadastro de Produtos</a></li>
+            <li><a href="telaPedido">Cadastro de Pedidos </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  
 
-<h2><center>PersistStruts2</center></h2>
+ <hr>
+ 
+ <footer>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <br><br><br><br><br><br><br>
+        <p>&copy; InovarTec - Todos os direitos reservados</p>
+      </footer>
+  
 
-<div class="container">
 
-<a href="telaCliente" class="btn btn-primary">Clientes</a><br><br>
 
-<a href="telaFornecedor" class="btn btn-primary">Fornecedores </a><br><br>
-
-<a href="telaProduto" class="btn btn-primary">Produtos</a><br><br>
-
-<a href="telaPedido" class="btn btn-primary">Pedidos </a><br><br>
-
-</div>
-	
+    
 </body>
-</html>

@@ -3,29 +3,34 @@
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
-	
+
 <struts>
 
-   <package name="default"  extends="struts-default">
-     
-      <action name="inicio">
+	<package name="default" extends="struts-default">
+
+		<action name="inicio">
 			<result>/index.jsp</result>
 		</action>
 
-	<action name="telaCliente">
-		<result>/jsp/cliente.jsp</result>
-	</action>
-	
-	<action name="telaFornecedor">
-		<result>/jsp/fornecedorLista.jsp</result>
-	</action>
-<action name="telaFornecedor">
-		<result>/jsp/fornecedor.jsp</result>
-	</action>
+		<action name="telaCliente">
+			<result>/jsp/cliente.jsp</result>
+		</action>
+
+		<action name="telaFornecedor">
+			<result>/jsp/fornecedorLista.jsp</result>
+		</action>
 		
-   </package>
-   
-   <include file="struts-cliente.xml" />
-   <include file="struts-fornecedor.xml" />
-   
+		<action name="telaFornecedor">
+			<result>/jsp/fornecedor.jsp</result>
+		</action>
+		
+		<action name="telaProduto" method="pesquisarFornecedor"  class="br.com.PersistStruts.actions.FornecedorAction">
+			<result>/jsp/produto.jsp</result>
+		</action>
+
+	</package>
+
+	<include file="struts-cliente.xml" />
+	<include file="struts-fornecedor.xml" />
+    <include file="struts-produto.xml" />
 </struts>
