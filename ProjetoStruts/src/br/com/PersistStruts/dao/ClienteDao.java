@@ -13,31 +13,6 @@ import br.com.PersistStruts.modelo.Cliente;
 
 
 @Repository
-public class ClienteDao {
-	
-	
-	@PersistenceContext(unitName ="JPA")
-	protected EntityManager entityManager;
-	
-	 @Transactional
-	  public void salvar(Cliente cliente) throws Exception {
-		 entityManager.persist(cliente);
-		
-	     
-	  }
-	 
-	 public List<Cliente> buscar(){
-		return entityManager.createNamedQuery("Cliente.findAll", Cliente.class).getResultList();
-		
-		 
-	 }
-	 public List<Cliente> buscar(Cliente cliente){
-			return entityManager.createNamedQuery("Cliente.buscaNome", Cliente.class).setParameter(1,cliente.getNome()+"%").getResultList();
-			
-			 
-		 }
-		 
-		 
-	
-	
+public class ClienteDao extends GenericDao<Cliente, Integer> {
+
 }

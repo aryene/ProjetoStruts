@@ -23,7 +23,7 @@ public class ClienteServico  {
 	public String salvar(Cliente cliente){
 		String msg ="Cadastro Efetuado";
 		try {
-			clienteDao.salvar(cliente);
+			clienteDao.save(cliente);
 		} catch (Exception e) {
 			e.printStackTrace();
 			msg = e.getMessage();
@@ -34,12 +34,16 @@ public class ClienteServico  {
 	}
 
 	public List<Cliente> pesquisarCliente(){
-		return clienteDao.buscar();
+		return clienteDao.findAll();
+
+	}
+	public Cliente pesquisarClienteId(Cliente cliente){
+		return clienteDao.findById(cliente.getId());
 
 	}
 	
 	public List<Cliente> pesquisarClienteNome(Cliente cliente){
-		return clienteDao.buscar(cliente);
+		return clienteDao.findByNamedQuery("Cliente.buscaNome",cliente.getNome());
 
 	}
 

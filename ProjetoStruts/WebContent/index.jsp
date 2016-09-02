@@ -38,13 +38,19 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-  
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
- <hr>
+  <h16>Bem Vindo!!!   Em   construção</h16><br>
+  <button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+								</button>
+
+
  
  <footer>
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
- <br><br><br><br><br><br><br>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <hr>
         <p>&copy; InovarTec - Todos os direitos reservados</p>
       </footer>
   

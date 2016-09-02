@@ -50,32 +50,32 @@
 				<label class="col-sm-2 control-label">Fornecedor do Produto:</label>
 				<div class="col-sm-10">
 					<select class="form-control" name="produto.fornecedor.id">
-						<c:forEach items="${listaFornecedor}" var="f" >
-							<option value="${f.id}" >${f.nome}</option>
+						<c:forEach items="${listaFornecedor}" var="f">
+							<option value="${f.id}">${f.nome}</option>
 							<br>
 						</c:forEach>
 					</select>
 
 				</div>
 			</div>
-			
+
 
 			<div align="center">
 				<input type="submit" class="btn btn-primary"
 					value="Cadastra Fornecedor "> <a href="inicio"
 					class="btn btn-success">Voltar </a>
 			</div>
-</s:form>
+		</s:form>
 
 
-			<c:if test="${mensagem != null}">
-				<div class="alert alert-warning" role="alert">
-					<span class="glyphicon glyphicon-exclamation-sign"
-						aria-hidden="true"></span> ${mensagem}
-				</div>
-			</c:if>
-		
-		 <s:actionmessage cssClass="alert alert-success" /> 
+		<c:if test="${mensagem != null}">
+			<div class="alert alert-warning" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign"
+					aria-hidden="true"></span> ${mensagem}
+			</div>
+		</c:if>
+
+		<s:actionmessage cssClass="alert alert-success" />
 
 		<s:form namespace="/produto" action="pesquisarProdutoNome">
 			<div class="input-group" align="center">
@@ -88,13 +88,47 @@
 			</div>
 		</s:form>
 
-		<br>
-		<br>
+		<br> <br>
 
-		<c:forEach items="${listaProduto}" var="produto">
+		<%-- <c:forEach items="${listaProduto}" var="produto">
 		${produto.descricao } 
 		<br>
-		</c:forEach>
+		</c:forEach> --%>
+
+		<c:if test="${produto != null}">
+
+
+
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>Produto</th>
+						<th>Valor Unitario</th>
+						<th>Editar</th>
+						<th>Excluir</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:set var="cont" value="0"></c:set>
+					<c:forEach items="${listaProduto}" var="p" varStatus="i">
+						<tr>
+							<td>${p.id}</td>
+							<td>${p.descricao}</td>
+							<td>${p.valor}</td>
+							<td><button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+								</button></td>  
+							<td><button type="button" class="btn btn-default btn-lg">
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								</button></td>
+						</tr>
+
+					</c:forEach>
+				</tbody>
+
+			</table>
+		</c:if>
 
 	</div>
 	</div>
